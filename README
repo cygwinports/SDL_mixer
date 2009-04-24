@@ -10,23 +10,24 @@ files, MIDI files, music formats .MOD .S3M .IT .XM., and MP3 music
 using the SMPEG library. 
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libSDL1.2_0-1.2.13-2
-  libsmpeg0.4_0-0.4.4-5
+  cygwin-1.7.0-45
+  libgcc1-4.3.2-2
+  libSDL1.2_0-1.2.13-10
+  libsmpeg0.4_0-0.4.4-10
   libvorbisfile3-1.2.0-1
 
 Build requirements:
 (besides corresponding devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  libtool-2.2.6a-1
-  make-3.81-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  libtool-2.2.7a-12
+  make-3.81-2
   sed-4.1.5-2
-  w32api-3.12-1
+  w32api-3.13-1
 
 Canonical homepage:
   http://www.libsdl.org/projects/SDL_mixer/
@@ -54,9 +55,9 @@ Files included in the binary packages:
 
 (libSDL_mixer1.2_0)
   /usr/bin/cygSDL_mixer-1-2-0.dll
-  /usr/share/doc/SDL_mixer-1.2.8/CHANGES
-  /usr/share/doc/SDL_mixer-1.2.8/COPYING
-  /usr/share/doc/SDL_mixer-1.2.8/README
+  /usr/share/doc/SDL_mixer/CHANGES
+  /usr/share/doc/SDL_mixer/COPYING
+  /usr/share/doc/SDL_mixer/README
 
 (libSDL_mixer-devel)
   /usr/include/SDL/SDL_mixer.h
@@ -68,23 +69,8 @@ Files included in the binary packages:
 
 Port Notes:
 
------ version 1.2.8-2 -----
-Rebuilt.
-
------ version 1.2.8-1 -----
-Version bump.
-
------ version 1.2.7-1 -----
-Version bump.
-
------ version 1.2.6-1 -----
-Rebuilt with gcc-3.4 and the X11 port of libSDL, with mikmod support.
-
------ version 1.2.5-2 -----
-Rebuilt against SDL-1.2.7-2, with support for Ogg Vorbis audio.
-
------ version 1.2.5-1 -----
-Initial release for Cygwin.
+----- version 1.2.8-10 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:
