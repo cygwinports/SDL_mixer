@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libSDL_mixer1.2_0 libSDL-devel
+requires: libSDL_mixer1.2_0 libSDL-devel
 external-source: SDL_mixer
 sdesc: "Multi-channel audio mixer for SDL (development)"
 ldesc: "SDL_mixer is a simple multi-channel audio mixer based on SDL.
