@@ -1,0 +1,31 @@
+--- origsrc/SDL_mixer-1.2.11/configure.in	2009-11-17 02:09:50.309827900 -0600
++++ src/SDL_mixer-1.2.11/configure.in	2009-11-17 02:12:49.600940500 -0600
+@@ -57,17 +57,8 @@ fi
+ AC_CHECK_PROGS(WINDRES, [windres $hostaliaswindres $host_os-windres])
+ 
+ dnl Set up the compiler and linker flags
+-case "$host" in
+-    *-*-cygwin*)
+-        # We build SDL on cygwin without the UNIX emulation layer
+-        BASE_CFLAGS="-I/usr/include/mingw -mno-cygwin"
+-        BASE_LDFLAGS="-mno-cygwin"
+-        ;;
+-    *)
+-        BASE_CFLAGS="-D_GNU_SOURCE=1"
+-        BASE_LDFLAGS=""
+-        ;;
+-esac
++BASE_CFLAGS="-D_GNU_SOURCE=1"
++BASE_LDFLAGS=""
+ BUILD_CFLAGS="$CFLAGS $CPPFLAGS"
+ EXTRA_CFLAGS="$INCLUDE $BASE_CFLAGS"
+ BUILD_LDFLAGS="$LDFLAGS"
+@@ -112,7 +103,7 @@ if test x$enable_dependency_tracking = x
+ fi
+     
+ case "$host" in
+-    *-*-cygwin* | *-*-mingw32*)
++    *-*-mingw32*)
+         VERSION_SOURCES="$srcdir/version.rc"
+         EXE=".exe"
+         if test "$build" != "$host"; then # cross-compiling

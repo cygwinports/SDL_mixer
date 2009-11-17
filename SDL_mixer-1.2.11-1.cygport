@@ -2,8 +2,9 @@ DESCRIPTION="Simple DirectMedia Layer mixer library"
 HOMEPAGE="http://www.libsdl.org/projects/${PN}/"
 SRC_URI="${HOMEPAGE}/release/${P}.tar.gz"
 PATCH_URI="
-	1.2.8-dlopen-libs.patch
-	1.2.8-not-win32.patch
+	1.2.11-autoconf.patch
+	1.2.11-dlopen-libs.patch
+	1.2.11-not-win32.patch
 	1.2.8-native-midi-win32.patch
 "
 
@@ -11,12 +12,6 @@ PKG_NAMES="${PN} lib${PN}1.2_0 lib${PN}-devel"
 libSDL_mixer1_2_0_CONTENTS='usr/bin/*-1-2-0.dll usr/share/doc/'
 libSDL_mixer_devel_CONTENTS='usr/include/ usr/lib/'
 
-DISTCLEANFILES="acinclude.m4"
 NO_AUTOHEADER=1
 
-CYGCONF_ARGS="
-	--enable-music-midi --enable-music-native-midi --disable-music-timidity-midi
-	--enable-music-mod
-	--enable-music-mp3 --enable-music-mp3-shared
-	--enable-music-ogg --enable-music-ogg-shared
-"
+CYGCONF_ARGS="--enable-music-native-midi --disable-music-timidity-midi"

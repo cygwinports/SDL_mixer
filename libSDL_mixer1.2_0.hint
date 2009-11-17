@@ -1,5 +1,5 @@
 category: Audio
-requires: libgcc1 libSDL1.2_0 libsmpeg0.4_0 libvorbisfile3
+requires: libgcc1 libFLAC8 libmikmod2 libSDL1.2_0 libsmpeg0.4_0 libvorbisfile3
 external-source: SDL_mixer
 sdesc: "Multi-channel audio mixer for SDL (runtime)"
 ldesc: "SDL_mixer is a simple multi-channel audio mixer based on SDL.

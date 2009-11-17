@@ -10,21 +10,23 @@ files, MIDI files, music formats .MOD .S3M .IT .XM., and MP3 music
 using the SMPEG library. 
 
 Runtime requirements:
-  cygwin-1.7.0-45
-  libgcc1-4.3.2-2
-  libSDL1.2_0-1.2.13-10
+  cygwin-1.7.0-62
+  libFLAC8-1.2.1-2
+  libgcc1-4.3.4-1
+  libmikmod2-3.1.12-10
+  libSDL1.2_0-1.2.14-1
   libsmpeg0.4_0-0.4.4-10
-  libvorbisfile3-1.2.0-1
+  libvorbisfile3-1.2.3-1
 
 Build requirements:
 (besides corresponding devel packages)
   autoconf2.5-2.63-10
-  automake1.10-1.10.1-10
-  binutils-20080624-2
-  cygport-0.9.6-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  libtool-2.2.7a-12
+  automake1.11-1.11-10
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  libtool-2.2.7a-14
   make-3.81-2
   sed-4.1.5-2
   w32api-3.13-1
@@ -38,36 +40,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack SDL_mixer-1.2.8-X-src.tar.bz2
+  unpack SDL_mixer-1.2.11-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./SDL_mixer-1.2.8-X.cygport all
+  cygport ./SDL_mixer-1.2.11-X.cygport all
 
 This will create:
-  /usr/src/SDL_mixer-1.2.8-X-src.tar.bz2
-  /usr/src/libSDL_mixer-devel-1.2.8-X.tar.bz2
-  /usr/src/libSDL_mixer1.2_0-1.2.8-X.tar.bz2
+  /usr/src/SDL_mixer-1.2.11-X-src.tar.bz2
+  /usr/src/libSDL_mixer-devel-1.2.11-X.tar.bz2
+  /usr/src/libSDL_mixer1.2_0-1.2.11-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(libSDL_mixer1.2_0)
-  /usr/bin/cygSDL_mixer-1-2-0.dll
-  /usr/share/doc/SDL_mixer/CHANGES
-  /usr/share/doc/SDL_mixer/COPYING
-  /usr/share/doc/SDL_mixer/README
-
-(libSDL_mixer-devel)
-  /usr/include/SDL/SDL_mixer.h
-  /usr/lib/libSDL_mixer.a
-  /usr/lib/libSDL_mixer.dll.a
-  /usr/lib/libSDL_mixer.la
-
-------------------
-
 Port Notes:
+
+----- version 1.2.11-1 -----
+Version bump.
 
 ----- version 1.2.8-10 -----
 Initial release for Cygwin 1.7.
