@@ -3,15 +3,17 @@ HOMEPAGE="http://www.libsdl.org/projects/${PN}/"
 SRC_URI="${HOMEPAGE}/release/${P}.tar.gz"
 PATCH_URI="
 	1.2.11-autoconf.patch
-	1.2.11-dlopen-libs.patch
-	1.2.11-not-win32.patch
+	1.2.12-dlopen-libs.patch
+	1.2.12-not-win32.patch
 	1.2.8-native-midi-win32.patch
 "
 
-PKG_NAMES="${PN} lib${PN}1.2_0 lib${PN}-devel"
+PKG_NAMES="lib${PN}1.2_0 lib${PN}-devel"
 libSDL_mixer1_2_0_CONTENTS='usr/bin/*-1-2-0.dll usr/share/doc/'
 libSDL_mixer_devel_CONTENTS='usr/include/ usr/lib/'
 
 NO_AUTOHEADER=1
 
 CYGCONF_ARGS="--enable-music-native-midi --disable-music-timidity-midi"
+
+KEEP_LA_FILES="none"

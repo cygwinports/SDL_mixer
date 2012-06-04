@@ -1,6 +1,6 @@
---- origsrc/SDL_mixer-1.2.11/configure.in	2009-11-17 02:09:50.309827900 -0600
-+++ src/SDL_mixer-1.2.11/configure.in	2009-11-17 02:12:49.600940500 -0600
-@@ -57,17 +57,8 @@ fi
+--- origsrc/SDL_mixer-1.2.12/configure.in	2012-06-03 18:58:58.051066900 -0500
++++ src/SDL_mixer-1.2.12/configure.in	2012-06-03 19:00:19.793742300 -0500
+@@ -56,17 +56,8 @@ fi
  AC_CHECK_PROGS(WINDRES, [windres $hostaliaswindres $host_os-windres])
  
  dnl Set up the compiler and linker flags
@@ -20,12 +20,21 @@
  BUILD_CFLAGS="$CFLAGS $CPPFLAGS"
  EXTRA_CFLAGS="$INCLUDE $BASE_CFLAGS"
  BUILD_LDFLAGS="$LDFLAGS"
-@@ -112,7 +103,7 @@ if test x$enable_dependency_tracking = x
- fi
-     
- case "$host" in
+@@ -115,7 +106,7 @@ case "$host" in
+         #VERSION_SOURCES="$srcdir/version.rc"
+         EXE=".exe"
+ 	;;
 -    *-*-cygwin* | *-*-mingw32*)
 +    *-*-mingw32*)
          VERSION_SOURCES="$srcdir/version.rc"
          EXE=".exe"
          if test "$build" != "$host"; then # cross-compiling
+@@ -286,7 +277,7 @@ return 1;
+             *-*-cygwin*)
+                 mikmod_lib=/usr/bin/mikmod-2.dll
+                 ;;
+-            *-*-cygwin* | *-*-mingw32*)
++            *-*-mingw32*)
+                 mikmod_lib=[`find_lib "libmikmod*.dll"`]
+                 ;;
+             *)

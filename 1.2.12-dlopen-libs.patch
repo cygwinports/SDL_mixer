@@ -1,0 +1,60 @@
+--- origsrc/SDL_mixer-1.2.12/configure.in	2012-06-03 18:54:25.074453500 -0500
++++ src/SDL_mixer-1.2.12/configure.in	2012-06-03 18:58:25.679215400 -0500
+@@ -283,6 +283,9 @@ return 1;
+             *-*-darwin*)
+                 mikmod_lib=[`find_lib libmikmod.dylib`]
+                 ;;
++            *-*-cygwin*)
++                mikmod_lib=/usr/bin/mikmod-2.dll
++                ;;
+             *-*-cygwin* | *-*-mingw32*)
+                 mikmod_lib=[`find_lib "libmikmod*.dll"`]
+                 ;;
+@@ -391,7 +394,10 @@ AC_HELP_STRING([--enable-music-fluidsynt
+                         fluidsynth_lib=[`find_lib libfluidsynth.[0-9]*`]
+                     fi
+                     ;;
+-                *-*-cygwin* | *-*-mingw32*)
++                *-*-cygwin*)
++                    fluidsynth_lib=/usr/bin/cygfluidsynth-1.dll
++                    ;;
++                *-*-mingw32*)
+                     fluidsynth_lib=[`find_lib "fluidsynth*.dll"`]
+                     ;;
+                 *)
+@@ -470,7 +476,10 @@ if test x$enable_music_ogg = xyes; then
+                 *-*-darwin*)
+                     ogg_lib=[`find_lib libvorbisfile.dylib`]
+                     ;;
+-                *-*-cygwin* | *-*-mingw32*)
++                *-*-cygwin*)
++                    ogg_lib=/usr/bin/cygvorbisfile-3.dll
++                    ;;
++                *-*-mingw32*)
+                     ogg_lib=[`find_lib "libvorbisfile*.dll"`]
+                     ;;
+                 *)
+@@ -530,7 +539,10 @@ if test x$enable_music_flac = xyes; then
+                 *-*-darwin*)
+                     flac_lib=[`find_lib libFLAC.dylib`]
+                     ;;
+-                *-*-cygwin* | *-*-mingw32*)
++                *-*-cygwin*)
++                    flac_lib=/usr/bin/cygFLAC-8.dll
++                    ;;
++                *-*-mingw32*)
+                     flac_lib=[`find_lib "libFLAC*.dll"`]
+                     ;;
+                 *)
+@@ -572,7 +584,10 @@ if test x$enable_music_mp3 = xyes; then
+             *-*-darwin*)
+                 smpeg_lib=[`find_lib libsmpeg.dylib`]
+                 ;;
+-            *-*-cygwin* | *-*-mingw32*)
++            *-*-cygwin*)
++                smpeg_lib=/usr/bin/cygsmpeg-0-4-0.dll
++                ;;
++            *-*-mingw32*)
+                 smpeg_lib=[`find_lib "smpeg*.dll"`]
+                 ;;
+             *)
