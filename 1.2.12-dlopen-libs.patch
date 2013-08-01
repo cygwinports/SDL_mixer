@@ -46,15 +46,3 @@
                      flac_lib=[`find_lib "libFLAC*.dll"`]
                      ;;
                  *)
-@@ -572,7 +584,10 @@ if test x$enable_music_mp3 = xyes; then
-             *-*-darwin*)
-                 smpeg_lib=[`find_lib libsmpeg.dylib`]
-                 ;;
--            *-*-cygwin* | *-*-mingw32*)
-+            *-*-cygwin*)
-+                smpeg_lib=/usr/bin/cygsmpeg-0-4-0.dll
-+                ;;
-+            *-*-mingw32*)
-                 smpeg_lib=[`find_lib "smpeg*.dll"`]
-                 ;;
-             *)
