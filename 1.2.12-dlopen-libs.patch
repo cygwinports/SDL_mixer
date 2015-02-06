@@ -5,7 +5,7 @@
                  mikmod_lib=[`find_lib libmikmod.dylib`]
                  ;;
 +            *-*-cygwin*)
-+                mikmod_lib=/usr/bin/mikmod-3.dll
++                mikmod_lib=/usr/bin/cygmikmod-3.dll
 +                ;;
              *-*-cygwin* | *-*-mingw32*)
                  mikmod_lib=[`find_lib "libmikmod*.dll"`]

@@ -1,6 +1,6 @@
 NAME="SDL_mixer"
 VERSION=1.2.12
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="Multi-channel audio mixer for SDL"
 DESCRIPTION="SDL_mixer is a simple multi-channel audio mixer based on SDL. It
