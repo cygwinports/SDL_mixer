@@ -1,6 +1,6 @@
 NAME="SDL_mixer"
 VERSION=1.2.12
-RELEASE=3
+RELEASE=4
 CATEGORY="Libs"
 SUMMARY="Multi-channel audio mixer for SDL"
 DESCRIPTION="SDL_mixer is a simple multi-channel audio mixer based on SDL. It
@@ -19,7 +19,6 @@ PATCH_URI="
 "
 
 PKG_NAMES="lib${NAME}1.2_0 lib${NAME}-devel"
-libSDL_mixer1_2_0_REQUIRES="libFLAC8 libfluidsynth1 libmikmod3 libvorbisfile3"
 libSDL_mixer1_2_0_CONTENTS='usr/bin/*-1-2-0.dll usr/share/doc/'
 libSDL_mixer_devel_CONTENTS='usr/include/ usr/lib/'
 
@@ -27,8 +26,10 @@ NO_AUTOHEADER=1
 
 CYGCONF_ARGS="
 	--disable-music-mp3
-	--enable-music-native-midi
-	--disable-music-timidity-midi
+	--disable-music-flac-shared
+	--disable-music-fluidsynth-shared
+	--disable-music-mod-shared
+	--disable-music-ogg-shared
 "
 
 KEEP_LA_FILES="none"
